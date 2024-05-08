@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+  my-httpd-php-app:
+    container_name: my-php-container
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports: 
+      - "8000:8000"
+    volumes:
+      - ".:/var/www/html"
